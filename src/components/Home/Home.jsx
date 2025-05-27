@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Home.css'
 import { getAllProducts } from '../../ApiService/api'
+import {Link} from 'react-router-dom'
 
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
     const fetchProducts = async () => {
       const data = await getAllProducts()
       setProducts(data)
+      console.log(data)
     }
     fetchProducts()
   }, [])
@@ -22,9 +24,11 @@ function Home() {
             <img src={product.image} alt="alternative" />
             <h2>{product.title}</h2>
             <p className='price'>
-              rs {product.price}
+              $ {product.price}
             </p>
-            <button>Product Details</button>
+            <Link to={`/product/${product.id}`}>
+              <button>Product Details</button>
+            </Link>
           </div>
         ))
       }
@@ -34,7 +38,6 @@ function Home() {
 
 export default Home
 
-
-
+///
 
 

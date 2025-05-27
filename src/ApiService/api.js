@@ -1,13 +1,16 @@
-import axios from "axios"
+import axios from "axios";
 
-const BASE_URL='https://fakestoreapi.com/products'
+const BASE_URL = "https://fakestoreapi.com/products";
 
-export const getAllProducts=async()=>{
-    const response=await axios.get(`${BASE_URL}`) 
+export const getAllProducts = async () => {
+    try{
+        const response=await axios.get(`${BASE_URL}`) 
+        return response.data;
 
-    return response.data
-}
-
+    }catch(e){
+        console.error(e)
+    }
+};
 
 export const getProductId=async(id)=>{
     const response=await axios.get(`${BASE_URL}/${id}`) 
