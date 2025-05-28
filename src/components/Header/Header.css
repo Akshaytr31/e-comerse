@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: sans-serif;
 }
 
 .header{
@@ -16,12 +17,25 @@ body{
 
 }
 
-.header button{
-    border: none;
-    background-color: gray;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 14px;
-    font-weight: bold;
+.header-list{
+    display: flex;
+    list-style: none;
     margin-right: 40px;
+
 }
+.header-list li{
+    margin-inline: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filter-block{
+    position: absolute;
+}
+
+.filter-block ul {
+    list-style: none;
+}
+
+

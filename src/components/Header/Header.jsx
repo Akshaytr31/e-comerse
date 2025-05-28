@@ -2,21 +2,21 @@ import React from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
 
-function Header() {
+function Header({ toggleFilter }) {
   return (
-    <header className='header'>
-      <Link to='/' style={{textDecoration:'none',color:'#fff'}}>
-        <h1>Techflix store</h1>
-      </Link>
-        <Link to='/logout'>
-
-          <button className='logout-button'>Log out</button>
+    <header> 
+      <div className='header'>
+        <Link to='/' style={{ textDecoration: 'none', color: '#fff' }}>
+          <h1>Techflix store</h1>
         </Link>
+        <ul className='header-list'>
+          <li onClick={toggleFilter}>Filter</li>
+          <li>About us</li>
+          <li>Contact us</li>
+        </ul>
+      </div>
     </header>
   )
 }
 
 export default Header
-
-
-///
