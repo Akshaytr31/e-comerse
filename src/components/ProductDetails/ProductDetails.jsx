@@ -14,6 +14,10 @@ function ProductDetails() {
     }
     fetchPorductsDetails()
   }, [id])
+
+  const handleBuyNow=()=>{
+    window.confirm("the Product is out of store")
+  }
   return (
     <div className='product-details-container'>
       <img src={productDetails.image} alt="image" className='product-image' />
@@ -21,8 +25,8 @@ function ProductDetails() {
         <h2>{productDetails.title}</h2>
 
         <p className='product-description'>{productDetails.discription}</p>
-        <p className='product-price'>{productDetails.price}</p>
-        <button className='buy-now-button'>Buy Now</button>
+        <p className='product-price' >{productDetails.price}</p>
+        <button className='buy-now-button' onClick={handleBuyNow} >Buy Now</button>
         <Link to='/'> 
           <button className='go-back-home-button'>Go back Home</button>
         </Link>
@@ -31,8 +35,5 @@ function ProductDetails() {
   )
 }
 
-export default ProductDetails
+export default ProductDetails;
 
-
-
-///
