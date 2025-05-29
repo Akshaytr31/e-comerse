@@ -2,7 +2,9 @@ import React from 'react'
 import './SideBar.css'
 import { Link } from 'react-router-dom'
 
-function SideBar() {
+function SideBar({demo}) {
+  console.log(demo);
+  
   return (
     <div className='sidebar'>
       <div className='sidebar-elm'>

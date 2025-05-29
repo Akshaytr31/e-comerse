@@ -10,7 +10,7 @@ import SideBar from '../components/SideBar/SideBar'
 function RoutesLayout() {
   return (
     <Router>
-      <Header />
+      {/* <Header /> */}
       {/* <SideBar/> */}
       <Routes>
         <Route path='/' element={<Home/>} />

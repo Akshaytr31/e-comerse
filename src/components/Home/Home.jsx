@@ -30,6 +30,9 @@ function Home() {
   const toggleFilter = () => {
     setShowFilter(prev => !prev)
   }
+  let demo = () => {
+    let a=10
+  }
 
   return (
     <>
@@ -37,7 +40,7 @@ function Home() {
       {showFilter && <Filter onSort={handleSort} />}
       <div className='home-page'>
         <div className='poroduct-grid'>
-          <SideBar />
+          <SideBar demo={demo} />
           {
             filteredProducts.map((product) => (
               <div className='product' key={product.id}>
@@ -57,3 +60,6 @@ function Home() {
 }
 
 export default Home
+
+
+//
